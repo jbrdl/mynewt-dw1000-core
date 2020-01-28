@@ -556,10 +556,10 @@ rx_complete_cb(struct uwb_dev * inst, struct uwb_mac_interface * cbs)
     struct uwb_ccp_instance * ccp = (struct uwb_ccp_instance *)cbs->inst_ptr;
 
     if (inst->fctrl_array[0] != FCNTL_IEEE_BLINK_CCP_64){
-        if(dpl_sem_get_count(&ccp->sem) == 0){
-            uwb_set_rx_timeout(inst, (uint16_t) 0xffff);
-            return true;
-        }
+        //if(dpl_sem_get_count(&ccp->sem) == 0){
+        //    uwb_set_rx_timeout(inst, (uint16_t) 0xffff);
+        //   return true;
+       // }
         return false;
     }
 
